@@ -1,17 +1,17 @@
 public class ShortList implements Comparable<ShortList>{
-    public Coordinates how;
+    public Coordinates now;
     public Coordinates prev;
-    public int DistanceToFinish;
+    public int cost;
 
-    public ShortList(Coordinates how, Coordinates prev, int DistanceToFinish){
-        this.how = how;
+    public ShortList(Coordinates now, Coordinates prev, int cost){
+        this.now = now;
         this.prev = prev;
-        this.DistanceToFinish = DistanceToFinish;
+        this.cost = cost;
     }
 
     @Override
     public int compareTo(ShortList o) {
-        return this.DistanceToFinish - o.DistanceToFinish;
+        return this.cost - o.cost;
     }
 }
 
